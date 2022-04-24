@@ -218,6 +218,10 @@ namespace DFSGame
                 DFS(child, depth+1);
                 stack.Pop();
             }
+            if (stack.Count == 0  && !solved)
+            {
+                Console.WriteLine("Final matrix could not have been reached ((. \ntry another matrix.");
+            }
         }
 
         /// <summary>
